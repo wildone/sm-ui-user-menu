@@ -18,7 +18,7 @@
       .toggle {
         --icon-size: var(--user-menu-toggle-size, 1rem);
         color: var(--user-menu-toggle-color, inherit);
-        width: 34px;
+        width: 35px;
         height: auto;
       }
 
@@ -32,6 +32,14 @@
 
       :host([callout*="bottom"]) .menu {
         bottom: var(--user-menu-offset, 35px);
+      }
+
+      :host([callout*="right"]) .menu {
+        right: 0;
+      }
+
+      :host([callout*="left"]) .menu {
+        left: 0;
       }
 
       .user {
