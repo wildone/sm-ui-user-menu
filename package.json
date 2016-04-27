@@ -1,0 +1,51 @@
+{
+  "name": "sm-ui-user-menu",
+  "version": "0.0.0",
+  "description": "User menu for Simpla",
+  "main": "sm-ui-user-menu.html",
+  "scripts": {
+    "test": "gulp test:local"
+  },
+  "author": "Simpla International <admin@simpla.io>",
+  "license": "MIT",
+  "keywords": [
+    "simpla",
+    "web component",
+    "polymer",
+    "user-menu"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SimplaElements/sm-ui-user-menu.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/SimplaElements/sm-ui-user-menu/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.0",
+    "babel-core": "^6.2.1",
+    "babel-eslint": "^6.0.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "browser-sync": "2.9.0",
+    "eslint": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-process-inline": "^0.1.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup-file": "^0.1.1",
+    "gulp-size": "^2.0.0",
+    "rollup-plugin-babel": "^2.2.0",
+    "rollup-plugin-commonjs": "^1.4.0",
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "run-sequence": "^1.1.5",
+    "web-component-tester": "^3.4.0",
+    "yargs": "^3.27.0"
+  }
+}

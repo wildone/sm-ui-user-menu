@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../sm-ui-core/sm-ui-core.html">
+<link rel="import" href="../sm-ui-button/sm-ui-button.html">
+<link rel="import" href="../sm-ui-callout/sm-ui-callout.html">
+
+<link rel="import" href="./sm-user-menu-item.html">
+
+<dom-module id="sm-ui-user-menu">
+  <template>
+    <style include="sm-css-shady"></style>
+    <style include="sm-css">
+      :host {
+        display: inline-block;
+        position: relative;
+        @apply(--typography);
+      }
+
+      .toggle {
+        --icon-size: var(--user-menu-toggle-size, 1rem);
+        color: var(--user-menu-toggle-color, inherit);
+        width: 34px;
+        height: auto;
+      }
+
+      .menu {
+        position: absolute;
+      }
+
+      :host([callout*="top"]) .menu {
+        top: var(--user-menu-offset, 35px);
+      }
+
+      :host([callout*="bottom"]) .menu {
+        bottom: var(--user-menu-offset, 35px);
+      }
+
+      .user {
+        display: block;
+        background: var(--off-white);
+        color: var(--dark-gray);
+        font-size: 12px;
+        padding: 11px 20px;
+      }
+    </style>
+
+    <button is="sm-ui-button" id="toggle" class="toggle" icon="[[_toggleIcon]]" on-tap="toggle"></button>
+
+    <sm-ui-callout arrow="[[callout]]" id="menu" class="menu" active="{{active}}">
+      <content select="sm-user-menu-item"></content>
+      <span class="user">[[user]]</span>
+    </sm-ui-callout>
+  </template>
+
+  <script src="./sm-ui-user-menu.js" inline></script>
+</dom-module>

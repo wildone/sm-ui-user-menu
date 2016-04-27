@@ -1,0 +1,61 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../sm-ui-core/sm-ui-core.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+
+<dom-module id="sm-user-menu-item">
+  <template>
+    <style include="sm-css">
+      :host {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 20px;
+        border-bottom: 1px solid var(--light-gray);
+        color: var(--text-color);
+        cursor: pointer;
+      }
+
+      :host(:hover) {
+        background: var(--off-white);
+      }
+
+      .text {
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 14px;
+      }
+
+      .icon {
+        --iron-icon-width: 14px;
+        --iron-icon-height: 14px;
+      }
+    </style>
+
+    <span class="text">
+      <content></content>
+    </span>
+
+    <iron-icon icon="[[icon]]" class="icon"></iron-icon>
+
+  </template>
+
+  <script>
+    class SmUserMenuItem {
+      beforeRegister() {
+        this.is = 'sm-user-menu-item';
+
+        this.properties = {
+
+          /**
+           * Icon of the item
+           * @type {Boolean}
+           */
+          icon: String
+
+        };
+      }
+    }
+
+    Polymer(SmUserMenuItem);
+  </script>
+</dom-module>
