@@ -47,7 +47,7 @@
 
     <sm-ui-callout arrow="[[callout]]" id="menu" class="menu" active="{{active}}">
       <content select="sm-user-menu-item"></content>
-      <span class="user">[[user]]</span>
+      <span class="user" hidden$="[[!user]]">[[user]]</span>
     </sm-ui-callout>
   </template>
 

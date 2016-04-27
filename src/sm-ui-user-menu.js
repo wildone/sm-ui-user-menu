@@ -28,7 +28,10 @@ class SmUiUserMenu {
        * User email
        * @type {String}
        */
-      user: String,
+      user: {
+        type: String,
+        value: ''
+      },
 
       /**
        * Icon of the toggle button
