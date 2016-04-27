@@ -1,6 +1,6 @@
 {
   "name": "sm-ui-user-menu",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "User menu for Simpla",
   "main": "sm-ui-user-menu.html",
   "scripts": {
@@ -15,11 +15,11 @@
     "user-menu"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/SimplaElements/sm-ui-user-menu.git"
+    "type": "git",
+    "url": "https://github.com/SimplaElements/sm-ui-user-menu.git"
   },
   "bugs": {
-    "url" : "https://github.com/SimplaElements/sm-ui-user-menu/issues"
+    "url": "https://github.com/SimplaElements/sm-ui-user-menu/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.0",
