@@ -10,16 +10,15 @@
     <style include="sm-css-shady"></style>
     <style include="sm-css">
       :host {
-        display: inline-block;
-        position: relative;
         @apply(--typography);
+        position: relative;
+        width: 35px;
       }
 
       .toggle {
-        --icon-size: var(--user-menu-toggle-size, 1rem);
-        color: var(--user-menu-toggle-color, inherit);
-        width: 35px;
-        height: auto;
+        --icon-size: var(--user-menu-toggle-size, 16px);
+        width: 100%;
+        height: 100%;
       }
 
       .menu {
@@ -48,10 +47,17 @@
         color: var(--dark-gray);
         font-size: 12px;
         padding: 11px 20px;
+        text-align: center;
       }
     </style>
 
-    <button is="sm-ui-button" id="toggle" class="toggle" icon="[[_toggleIcon]]" on-tap="toggle"></button>
+    <button
+      is="sm-ui-button"
+      id="toggle"
+      class="toggle"
+      icon="[[_toggleIcon]]"
+      on-tap="_handleTap">
+    </button>
 
     <sm-ui-callout arrow="[[callout]]" id="menu" class="menu" active="{{active}}">
       <content select="sm-user-menu-item"></content>

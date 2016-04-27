@@ -40,7 +40,14 @@ class SmUiUserMenu {
       _toggleIcon: {
         type: String,
         computed: '_computeToggleIcon(active)'
-      }
+      },
+
+      /**
+       * Whether menu should provide tap-to-open functionality
+       * Disable if active will be triggered another way
+       * @type {Boolean}
+       */
+      noTap: Boolean
 
     };
   }
@@ -51,6 +58,12 @@ class SmUiUserMenu {
    */
   toggle() {
     this.active = !this.active
+  }
+
+  _handleTap() {
+    if (!this.noTap) {
+      this.toggle();
+    }
   }
 
   /**
