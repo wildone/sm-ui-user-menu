@@ -21,13 +21,13 @@
 
       .text {
         display: inline-block;
-        padding-right: 15px;
         font-size: 14px;
       }
 
       .icon {
         --iron-icon-width: 14px;
         --iron-icon-height: 14px;
+        margin-left: 20px;
       }
     </style>
 
@@ -35,7 +35,7 @@
       <content></content>
     </span>
 
-    <iron-icon icon="[[icon]]" class="icon"></iron-icon>
+    <iron-icon icon="[[icon]]" class="icon" hidden$="[[!icon]]"></iron-icon>
 
   </template>
 
@@ -50,7 +50,10 @@
            * Icon of the item
            * @type {Boolean}
            */
-          icon: String
+          icon: {
+            type: String,
+            value: ''
+          }
 
         };
       }
