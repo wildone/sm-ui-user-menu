@@ -3,6 +3,8 @@
 
 User menu for Simpla
 
+**TODO:** Add basic tests
+
 --
 
 ### License
