@@ -33,13 +33,23 @@ class SmUiUserMenu {
         value: ''
       },
 
+      openIcon: {
+        type: String,
+        value: 'simpla:arrow-down'
+      },
+
+      closeIcon: {
+        type: String,
+        value: 'simpla:arrow-up'
+      },
+
       /**
        * Icon of the toggle button
        * @type {String}
        */
       _toggleIcon: {
         type: String,
-        computed: '_computeToggleIcon(active)'
+        computed: '_computeToggleIcon(active, openIcon, closeIcon)'
       },
 
       /**
@@ -69,10 +79,12 @@ class SmUiUserMenu {
   /**
    * Value of _toggleIcon determined by active
    * @param  {Boolean} active Current value of the active property
+   * @param  {String} openIcon Current value of the openIcon property
+   * @param  {String} closeIcon Current value of the closeIcon property
    * @return {undefined}
    */
-  _computeToggleIcon(active) {
-    return active ? 'simpla:arrow-up' : 'simpla:arrow-down';
+  _computeToggleIcon(active, openIcon, closeIcon) {
+    return active ? closeIcon : openIcon;
   }
 }
 

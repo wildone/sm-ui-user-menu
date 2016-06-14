@@ -12,7 +12,6 @@
       :host {
         @apply(--typography);
         position: relative;
-        width: 35px;
       }
 
       .toggle {
@@ -35,11 +34,11 @@
       }
 
       :host([callout*="right"]) .menu {
-        right: 0;
+        right: var(--user-menu-offset, 0);
       }
 
       :host([callout*="left"]) .menu {
-        left: 0;
+        left: var(--user-men-offset, 0);
       }
 
       .user {
