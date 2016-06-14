@@ -1,6 +1,6 @@
 {
   "name": "sm-ui-user-menu",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "User menu for Simpla",
   "main": "sm-ui-user-menu.html",
   "scripts": {
