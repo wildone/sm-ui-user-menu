@@ -19,6 +19,18 @@
         background: var(--off-white);
       }
 
+      :host([notification])::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0.45rem;
+        width: 0.45rem;
+        height: 0.45rem;
+        transform: translateY(-50%);
+        border-radius: 999px;
+        background: var(--red);
+      }
+
       .text {
         display: inline-block;
         white-space: nowrap;
@@ -54,6 +66,11 @@
           icon: {
             type: String,
             value: ''
+          },
+
+          notification: {
+            type: Boolean,
+            reflectToAttribute: true
           }
 
         };
